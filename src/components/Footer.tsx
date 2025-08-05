@@ -1,8 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-padel-dark text-white">
+  return <footer className="bg-padel-dark text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
@@ -21,9 +19,7 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 bg-padel-blue rounded-full flex items-center justify-center hover:bg-padel-blue-light transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-padel-blue rounded-full flex items-center justify-center hover:bg-padel-blue-light transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
+              
             </div>
           </div>
 
@@ -91,8 +87,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
