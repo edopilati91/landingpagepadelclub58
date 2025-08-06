@@ -2,49 +2,45 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Wifi, Car, Coffee, Dumbbell, Eye, Users2 } from "lucide-react";
 import barInteriorImage from "/lovable-uploads/bd9cb8dc-50c5-4ac8-aaef-156fe4c36ce4.png";
-
 const Facilities = () => {
-  const facilities = [
-    {
-      icon: Users2,
-      title: "5 Campi Standard",
-      description: "Campi regolamentari FITP con illuminazione LED professionale",
-      features: ["Superficie professionale", "Illuminazione LED", "Standard FITP"]
-    },
-    {
-      icon: Users2,
-      title: "1 Campo Singolo",
-      description: "Innovativo campo 1vs1 per allenamenti specifici e sfide uniche",
-      features: ["Primo in zona", "Allenamento intensivo", "Gioco dinamico"]
-    },
-    {
-      icon: Dumbbell,
-      title: "Palestra Attrezzata",
-      description: "Zona fitness con attrezzature specifiche per il padel",
-      features: ["Functional training", "Recupero muscolare", "Preparazione atletica"]
-    },
-    {
-      icon: Eye,
-      title: "Bar Panoramico",
-      description: "Zona relax con vista diretta sui campi per aperitivi e socializzazione",
-      features: ["Vista sui campi", "Aperitivi", "Area socializzazione"]
-    }
-  ];
-
-  const amenities = [
-    { icon: Wifi, label: "WiFi Gratuito" },
-    { icon: Car, label: "Parcheggio Gratuito" },
-    { icon: Coffee, label: "Bar & Caffetteria" },
-    { icon: MapPin, label: "Posizione Strategica" },
-  ];
-
-  return (
-    <section id="facilities" className="py-20 bg-secondary/30">
+  const facilities = [{
+    icon: Users2,
+    title: "5 Campi Standard",
+    description: "Campi regolamentari FITP con illuminazione LED professionale",
+    features: ["Superficie professionale", "Illuminazione LED", "Standard FITP"]
+  }, {
+    icon: Users2,
+    title: "1 Campo Singolo",
+    description: "Innovativo campo 1vs1 per allenamenti specifici e sfide uniche",
+    features: ["Primo in zona", "Allenamento intensivo", "Gioco dinamico"]
+  }, {
+    icon: Dumbbell,
+    title: "Palestra Attrezzata",
+    description: "Zona fitness con attrezzature specifiche per il padel",
+    features: ["Functional training", "Recupero muscolare", "Preparazione atletica"]
+  }, {
+    icon: Eye,
+    title: "Bar Panoramico",
+    description: "Zona relax con vista diretta sui campi per aperitivi e socializzazione",
+    features: ["Vista sui campi", "Aperitivi", "Area socializzazione"]
+  }];
+  const amenities = [{
+    icon: Wifi,
+    label: "WiFi Gratuito"
+  }, {
+    icon: Car,
+    label: "Parcheggio Gratuito"
+  }, {
+    icon: Coffee,
+    label: "Bar & Caffetteria"
+  }, {
+    icon: MapPin,
+    label: "Posizione Strategica"
+  }];
+  return <section id="facilities" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-padel-dark">
-            Le Nostre Strutture
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-padel-dark">La Nostra Struttura</h2>
           <p className="text-xl text-padel-gray max-w-3xl mx-auto leading-relaxed">
             Un capannone moderno di nuova costruzione con tutto il necessario 
             per vivere il padel al massimo livello.
@@ -53,8 +49,7 @@ const Facilities = () => {
 
         {/* Facilities Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {facilities.map((facility, index) => (
-            <Card key={index} className="hover:shadow-card transition-all duration-300 group">
+          {facilities.map((facility, index) => <Card key={index} className="hover:shadow-card transition-all duration-300 group">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -64,27 +59,20 @@ const Facilities = () => {
                     <h3 className="text-xl font-bold text-padel-dark mb-2">{facility.title}</h3>
                     <p className="text-padel-gray mb-4 leading-relaxed">{facility.description}</p>
                     <div className="flex flex-wrap gap-2">
-                      {facility.features.map((feature, idx) => (
-                        <Badge key={idx} variant="secondary" className="bg-padel-blue/10 text-padel-blue">
+                      {facility.features.map((feature, idx) => <Badge key={idx} variant="secondary" className="bg-padel-blue/10 text-padel-blue">
                           {feature}
-                        </Badge>
-                      ))}
+                        </Badge>)}
                     </div>
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Bar Spotlight */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative rounded-2xl overflow-hidden">
-            <img 
-              src={barInteriorImage} 
-              alt="Bar Panoramico Padel Club 58" 
-              className="w-full h-96 object-cover"
-            />
+            <img src={barInteriorImage} alt="Bar Panoramico Padel Club 58" className="w-full h-96 object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-padel-dark/40 to-transparent"></div>
           </div>
           
@@ -132,14 +120,12 @@ const Facilities = () => {
         <div className="text-center">
           <h3 className="text-2xl font-bold mb-8 text-padel-dark">Servizi Inclusi</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {amenities.map((amenity, index) => (
-              <div key={index} className="flex flex-col items-center gap-3 p-4">
+            {amenities.map((amenity, index) => <div key={index} className="flex flex-col items-center gap-3 p-4">
                 <div className="w-12 h-12 bg-padel-blue/10 rounded-full flex items-center justify-center">
                   <amenity.icon className="w-6 h-6 text-padel-blue" />
                 </div>
                 <span className="text-padel-dark font-medium">{amenity.label}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
@@ -164,8 +150,6 @@ const Facilities = () => {
           </p>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Facilities;
