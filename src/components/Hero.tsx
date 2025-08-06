@@ -13,9 +13,9 @@ const Hero = () => {
       <div className="relative container mx-auto px-4 py-20">
         <div className="max-w-2xl text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-white">PADEL</span>
+            
             <br />
-            <span className="text-white">CLUB</span>
+            <span className="text-white">Padel Club</span>
             <span className="text-padel-blue ml-4">58</span>
           </h1>
           
@@ -39,19 +39,12 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary hover:bg-padel-blue-dark text-lg px-8 py-4"
-              onClick={() => window.open('https://padel58.wansport.com/', '_blank')}
-            >
+            <Button size="lg" className="bg-gradient-primary hover:bg-padel-blue-dark text-lg px-8 py-4" onClick={() => window.open('https://padel58.wansport.com/', '_blank')}>
               Prenota il Tuo Campo
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-white hover:bg-white hover:text-padel-dark text-lg px-8 py-4 text-slate-950"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button variant="outline" size="lg" className="border-white hover:bg-white hover:text-padel-dark text-lg px-8 py-4 text-slate-950" onClick={() => document.getElementById('services')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               Scopri i Nostri Servizi
             </Button>
           </div>
